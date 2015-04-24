@@ -350,24 +350,31 @@
         <script src="./main.ctrl.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&v=3.exp"></script>
         <script>
-            var map, marker, myLatlng;
-            function initialize() {
-                myLatlng = new google.maps.LatLng(32.100565, 34.801675);
-                var mapOptions = {
-                    zoom: 17,
-                    center: myLatlng
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: 'Israel Yafa Bapark Conference Center',
-                    icon: "favicon.ico"
-                });
-            }
+            (function () {
+                function initialize() {
+                    var eventLatLng = new google.maps.LatLng(32.100565, 34.801675);
+                    var mapOptions = {
+                        zoom: 17,
+                        center: eventLatLng
+                    };
 
-            google.maps.event.addDomListener(window, 'load', initialize);
+                    var map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+
+                    var marker = new google.maps.Marker({
+                        position: eventLatLng,
+                        map: map,
+                        title: 'Israel Yafa Bapark Conference Center',
+                        icon: {
+                            url: 'images/angular.svg',
+                            scaledSize: new google.maps.Size(50, 50),
+                            anchor: new google.maps.Point(25, 25)
+                        }
+                    });
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+            })();
         </script>
     </body>
 </html>
