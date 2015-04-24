@@ -115,6 +115,7 @@
                            target="_blank" class="google-map" title="Google maps link"></a>
                         80 Rokach Blvd, Tel Aviv, Israel
                     </p>
+                    <div id="map-canvas"></div>
                 </div>
             </div>
 
@@ -305,6 +306,7 @@
                        target="_blank"><i class="fa fa-map-marker"></i></a>
 
                     <p><span>80 Rokach Blvd</span> Tel-Aviv, Israel</p>
+                  
                 </div>
 
                 <div>
@@ -343,5 +345,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
 
         <script src="./main.ctrl.js"></script>
+        <script  src="https://maps.googleapis.com/maps/api/js?signed_in=true&v=3.exp"></script>
+        <script>
+            var map, marker, myLatlng;
+            function initialize() {
+                myLatlng = new google.maps.LatLng(32.100565, 34.801675);
+        var mapOptions = {
+            zoom: 17,
+            center: myLatlng
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Israel Yafa Bapark Conference Center',
+            icon: "favicon.ico"
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+        </script>
     </body>
 </html>
