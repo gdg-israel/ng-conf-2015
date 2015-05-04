@@ -1,0 +1,48 @@
+#schedule {
+    .table {
+        width: 100%;
+        margin: 50px 0;
+        color: white;
+        border-collapse: collapse;
+        border-spacing: 0;
+        line-height: 1.428571429;
+
+        tr {
+            border-bottom: 1px solid white;
+            vertical-align: middle;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        thead > tr {
+            border-bottom-width: 2px;
+        }
+
+        h4, h6 {
+            margin: 10px 0;
+        }
+
+        h4 {
+            font-weight: normal;
+        }
+    }
+
+    .shared-session {
+        text-align: center;
+
+        .event {
+            color: $ngcolor2-dark;
+        }
+    }
+
+    .event {
+        color: $ngcolor;
+    }
+
+    .speaker {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

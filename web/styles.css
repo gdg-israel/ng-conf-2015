@@ -135,7 +135,7 @@ section .section-content {
     clear: both; }
 
 section.section-dark {
-  background: #666;
+  background: #333;
   color: #e6e6e6; }
   section.section-dark h2 {
     color: white; }
@@ -307,6 +307,34 @@ section.section-dark {
 
 .menu-button-margins {
   margin-right: 64px; }
+
+#schedule .table {
+  width: 100%;
+  margin: 50px 0;
+  color: white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.428571429; }
+  #schedule .table tr {
+    border-bottom: 1px solid white;
+    vertical-align: middle; }
+  #schedule .table td {
+    padding: 8px; }
+  #schedule .table thead > tr {
+    border-bottom-width: 2px; }
+  #schedule .table h4, #schedule .table h6 {
+    margin: 10px 0; }
+  #schedule .table h4 {
+    font-weight: normal; }
+#schedule .shared-session {
+  text-align: center; }
+  #schedule .shared-session .event {
+    color: #c0c0c0; }
+#schedule .event {
+  color: #d84437; }
+#schedule .speaker {
+  font-weight: bold;
+  text-transform: uppercase; }
 
 #team a {
   display: inline-block;

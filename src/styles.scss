@@ -184,7 +184,7 @@ section .section-content {
 }
 
 section.section-dark {
-    background: $ngbackground-light;
+    background: $ngbackground;
     color: $ngcolor2;
 
     h2 {
@@ -442,6 +442,8 @@ section.section-dark {
 .menu-button-margins {
     margin-right: 64px;
 }
+
+@import "_schedule";
 
 #team {
     a {
