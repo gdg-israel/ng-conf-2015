@@ -331,7 +331,13 @@ section.section-dark {
   #schedule .shared-session .event {
     color: #c0c0c0; }
 #schedule .event {
-  color: #d84437; }
+  color: #5383d3; }
+#schedule .event a {
+  color: #5383d3;
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease; }
+  #schedule .event a:hover {
+    color: #659dff; }
 #schedule .speaker {
   font-weight: bold;
   text-transform: uppercase; }

@@ -38,7 +38,16 @@
     }
 
     .event {
-        color: $ngcolor;
+        color: #5383d3;
+    }
+
+    .event a {
+        color: #5383d3;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: #659dff;
+        }
     }
 
     .speaker {
