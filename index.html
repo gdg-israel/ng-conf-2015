@@ -121,7 +121,7 @@
                             </td>
                             <td>
                                 <h4 class="event">Pushing data to the client and use it with angularJS</h4>
-                                <h6 class="speaker">Ran Whale</h6>
+                                <h6 class="speaker">Ran Wahle</h6>
                             </td>
                         </tr>
 
@@ -254,8 +254,23 @@
             <div class="section-content">
                 <h2>Speakers</h2>
 
+                <speaker name="Adam Klein" github="adamkleingit"></speaker>
+                <speaker name="Asaf David" github="asafdav" twitter="asafdav"></speaker>
+                <speaker name="Avi Haiat" github="thaiat"></speaker>
+                <speaker name="Benjamin Gruenbaum" github="benjamingr"></speaker>
+                <speaker name="Boris Dinkevich" github="borisd"></speaker>
+                <speaker name="Doron Zavelevsky" github="zavelevsky"></speaker>
+                <speaker name="Elior Boukhobza" github="mallowigi"></speaker>
+                <speaker name="Ran Wahle" github="ranwahle"></speaker>
+                <speaker name="Roy Peled" github="roypeled"></speaker>
+                <speaker name="Michael Haberman" github="habmic"></speaker>
+                <speaker name="Moshe Jacobs" github="micromoses"></speaker>
+                <speaker name="Netanel Gilad" github="netanelgilad"></speaker>
+                <speaker name="Nikas Praninskas" github="nikaspran"></speaker>
+                <speaker name="Nir Kaufman" github="nirkaufman" twitter="nirkaufman"></speaker>
+                <speaker name="Shai Reznik" github="shairez" twitter="shai_reznik"></speaker>
+                <speaker name="Uri Shaked" github="urish" twitter="UriShaked"></speaker>
             </div>
-
         </section>
 
         <section id="venue" class="section-dark">
@@ -411,7 +426,6 @@
                         Pavel 'PK' Kaminsky
                     </a>
 
-
                     <a target="_blank" layout="column" class="md-whiteframe-z2"
                        href="https://www.linkedin.com/profile/view?id=12433413">
                         <img src="images/team/AlonHeller.jpg" alt="Alon Heller" style="width:76px;"/>
@@ -455,6 +469,8 @@
                     <a href="#venue">Venue</a>
                     ☆
                     <a href="#schedule">Schedule</a>
+                    ☆
+                    <a href="#speakers">Speakers</a>
                     ☆
                     <a href="#partners">Partners</a>
                     ☆
@@ -512,6 +528,22 @@
             </div>
         </footer>
 
+        <script type="text/ng-template" id="speaker-template">
+            <div class="ngconf-speaker">
+                <img src="images/speakers/{{name|speakerImageName}}.jpg"/>
+                <h4>{{name}}</h4>
+
+                <div class="ngconf-social-links">
+                    <a href="http://github.com/{{github}}" target="_blank" title="GitHub">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="http://twitter.com/{{twitter}}" target="_blank" title="Twitter" ng-if="twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </script>
+
         <!-- Angular Material Dependencies -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
@@ -519,7 +551,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
 
-        <script src="./main.ctrl.js"></script>
+        <script src="ngconf.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&v=3.exp"></script>
         <script>
             (function () {
