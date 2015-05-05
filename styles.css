@@ -331,9 +331,9 @@ section.section-dark {
   #schedule .shared-session .event {
     color: #c0c0c0; }
 #schedule .event {
-  color: #5383d3; }
+  color: #A4C6FF; }
 #schedule .event a {
-  color: #5383d3;
+  color: #A4C6FF;
   -webkit-transition: color 0.25s ease;
           transition: color 0.25s ease; }
   #schedule .event a:hover {
@@ -341,6 +341,9 @@ section.section-dark {
 #schedule .speaker {
   font-weight: bold;
   text-transform: uppercase; }
+
+#speakers .section-content {
+  text-align: center; }
 
 .ngconf-speaker {
   width: 180px;
