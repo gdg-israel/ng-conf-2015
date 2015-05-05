@@ -336,6 +336,33 @@ section.section-dark {
   font-weight: bold;
   text-transform: uppercase; }
 
+.ngconf-speaker {
+  width: 180px;
+  height: 250px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 0 32px; }
+  .ngconf-speaker img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; }
+  .ngconf-speaker h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0 0; }
+  .ngconf-speaker .ngconf-social-links {
+    text-align: center; }
+    .ngconf-speaker .ngconf-social-links a {
+      color: #595A9D;
+      font-size: 24px;
+      padding: 0 5px;
+      -webkit-transition: color 0.2s ease;
+              transition: color 0.2s ease; }
+      .ngconf-speaker .ngconf-social-links a:hover {
+        color: blue; }
+
 #team a {
   display: inline-block;
   -webkit-backface-visibility: hidden;
