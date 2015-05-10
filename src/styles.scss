@@ -482,6 +482,17 @@ section.section-dark {
     }
 }
 
+#registration {
+
+    .button-container {
+        padding: 20px;
+        text-align: center;
+    }
+    .md-button {
+        zoom: 2;
+    }
+}
+
 //for fonts
 @for $i from 0 through 10 {
     $media: 1000*(10-$i/2)/10+ px;
