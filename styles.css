@@ -403,6 +403,12 @@ section.section-dark {
             transform: scale(1.15);
     color: black; }
 
+#registration .button-container {
+  padding: 20px;
+  text-align: center; }
+#registration .md-button {
+  zoom: 2; }
+
 @media (max-width: 1000px) {
   header .logo-submit a {
     font-size: 18px; }
