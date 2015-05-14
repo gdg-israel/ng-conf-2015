@@ -793,3 +793,7 @@ section.section-dark {
     section.hero-section .content h2 > small {
       font-size: 8.8px;
       width: 112px; } }
+
+.android-app {
+  color: #FFFFFF;
+  padding-left: 10px; }
