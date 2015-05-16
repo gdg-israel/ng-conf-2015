@@ -1,7 +1,7 @@
 'use strict';
 
 var gcm = require('node-gcm');
-var Firebase = require('Firebase');
+var Firebase = require('firebase');
 var _ = require('lodash');
 
 var registrationIds = [];
