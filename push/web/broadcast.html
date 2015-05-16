@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+        <style>
+            .firesniper-row:hover {
+                background-color: #DDF0FF;
+            }
+        </style>
+    </head>
+    <body ng-app="ngconf.broadcast">
+        <h1>ng-conf Boardcast</h1>
+
+        <div ng-controller="BoardcastCtrl as vm" class="ng-cloak container">
+            <h4>Registered users: {{vm.registeredUsers}}</h4>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Broadcast a message</div>
+                <div class="panel-body">
+                    Subject: <input class="form-control" ng-model="vm.message.title"/><br/>
+                    Message: <textarea class="form-control" ng-model="vm.message.body"></textarea></br/>
+                    <button class="btn btn-primary" ng-click="vm.send()">Send</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+        <script src="broadcast.js"></script>
+    </body>
+</html>

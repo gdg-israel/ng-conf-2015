@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>ng-conf Israel 2015 Updates</title>
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        Subscribe to Push Notifications...
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(subscribe)
+                    .catch(function (err) {
+                        console.error(err);
+                    })
+            } else {
+                console.warn('Service workers aren\'t supported in this browser.');
+            }
+
+            function subscribe() {
+                navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+                    serviceWorkerRegistration.pushManager.subscribe()
+                        .then(function (subscription) {
+                            // The subscription was successful
+                            console.log('successful! ');
+                            var xmlhttp = new XMLHttpRequest();
+                            xmlhttp.open('POST', 'https://ng-conf-2015.firebaseio.com/register.json', true);
+                            xmlhttp.send(JSON.stringify({'subscription': subscription.subscriptionId}));
+                            return;
+                        })
+                        .catch(function (e) {
+                            if (Notification.permission === 'denied') {
+                                console.warn('Permission for Notifications was denied');
+                            } else {
+                                console.error('Unable to subscribe to push.', e);
+                            }
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>

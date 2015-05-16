@@ -1,0 +1,13 @@
+{
+    "name": "ng-conf Israel 2015",
+    "short_name": "ng-conf IL",
+    "icons": [{
+        "src": "images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "start_url": "/index.html?homescreen=1",
+    "display": "standalone",
+    "gcm_sender_id": "355193356401",
+    "gcm_user_visible_only": true
+}
