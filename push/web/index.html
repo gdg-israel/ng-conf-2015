@@ -26,6 +26,11 @@
             section {
                 padding: 12px;
             }
+
+            #success {
+                color: green;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -38,6 +43,10 @@
         <section>
             To enable this service, simply authorize Push Notifications when asked to. You will receive push
             notifications with updates about the food, prize raffles, agenda changes, etc.
+        </section>
+
+        <section id="success" style="display:none;">
+            Push notifications enabled successfully :)
         </section>
 
         <script>
@@ -61,6 +70,11 @@
                             var xmlhttp = new XMLHttpRequest();
                             xmlhttp.open('POST', 'https://ng-conf-2015.firebaseio.com/register.json', true);
                             xmlhttp.send(JSON.stringify({'subscription': subscription.subscriptionId}));
+                            xmlhttp.onreadystatechange = function() {
+                                if (xmlhttp.readyState === 4) {
+                                    document.querySelector('#success').style.display='block';
+                                }
+                            }
                             return;
                         })
                         .catch(function (e) {
