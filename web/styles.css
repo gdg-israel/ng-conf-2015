@@ -403,11 +403,13 @@ section.section-dark {
             transform: scale(1.15);
     color: black; }
 
-#registration .button-container {
-  padding: 20px;
+#slides p {
   text-align: center; }
-#registration .md-button {
-  zoom: 2; }
+#slides .action-buttons {
+  margin: 40px 0 60px; }
+  #slides .action-buttons .md-button {
+    zoom: 2;
+    margin: 10px; }
 
 @media (max-width: 1000px) {
   header .logo-submit a {
@@ -795,8 +797,4 @@ section.section-dark {
       width: 112px; } }
 
 .android-app {
-  color: #FFFFFF;
   padding-left: 10px; }
-  @media (max-width: 780px) {
-    .android-app {
-      display: none; } }
