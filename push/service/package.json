@@ -1,6 +1,6 @@
 {
   "name": "ng-conf-2015-push",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "Uri Shaked",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^2.2.4",
-    "lodash": "^3.8.0",
-    "node-gcm": "^0.9.15"
+    "firebase": "2.2.9",
+    "lodash": "3.10.1",
+    "node-gcm": "^0.11.0"
   }
 }

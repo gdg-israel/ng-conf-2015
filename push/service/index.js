@@ -21,8 +21,11 @@ var fbRef = new Firebase('https://ng-conf-2015.firebaseio.com');
 fbRef.authWithCustomToken(process.env.FIREBASE_TOKEN, function (err) {
     console.log('Authentication result: ', err);
     fbRef.child('register').on('value', function (snapshot) {
-        registrationIds = _(snapshot.val()).values().pluck('subscription').uniq().value();
+        registrationIds = _(snapshot.val()).values().pluck('subscription').uniq().map(function(endpoint) {
+            return endpoint.replace(/^https:\/\/android.googleapis.com\/gcm\/send\//, '');
+        }).value();
     });
+
     fbRef.child('send').on('value', function (snapshot) {
         if (snapshot.val()) {
             sendMessage();

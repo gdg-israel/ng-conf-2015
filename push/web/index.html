@@ -44,7 +44,7 @@
             You will receive push
             notifications with <strong>updates about the food, prize raffles, agenda changes, etc. </strong><br/>
             <br/>
-            To enable this service, simply authorize Push Notifications when asked to. 
+            To enable this service, simply authorize Push Notifications when asked to.
         </section>
 
         <section id="success" style="display:none;">
@@ -65,13 +65,13 @@
 
             function subscribe() {
                 navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
-                    serviceWorkerRegistration.pushManager.subscribe()
+                    serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true})
                         .then(function (subscription) {
                             // The subscription was successful
                             console.log('successful! ');
                             var xmlhttp = new XMLHttpRequest();
                             xmlhttp.open('POST', 'https://ng-conf-2015.firebaseio.com/register.json', true);
-                            xmlhttp.send(JSON.stringify({'subscription': subscription.subscriptionId}));
+                            xmlhttp.send(JSON.stringify({'subscription': subscription.endpoint}));
                             xmlhttp.onreadystatechange = function() {
                                 if (xmlhttp.readyState === 4) {
                                     document.querySelector('#success').style.display='block';
